@@ -1,0 +1,11 @@
+
+<?php
+	header("Access-Control-Allow-Origin: *");
+	header("Content-Type:application/xml");
+
+	$url = 'http://185.3.48.8/';
+	$url = filter_var($url, FILTER_SANITIZE_URL);
+
+	$content = file_get_contents($url);
+	echo $content;
+?>
